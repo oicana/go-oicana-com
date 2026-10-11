@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>go.oicana.com - Oicana for Go</title>
+<meta name="description" content="Go module path of Oicana. Generate PDFs in Go from Typst templates, without a headless browser.">
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 system-ui, sans-serif; max-width: 42rem; margin: 4rem auto; padding: 0 1.25rem; }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  h1 + p { margin-top: 0; opacity: 0.75; }
+  pre { background: color-mix(in srgb, currentColor 8%, transparent); padding: 0.75rem 1rem; border-radius: 6px; overflow-x: auto; }
+  code { font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<h1>go.oicana.com</h1>
+<p>Generate PDFs in Go from Typst templates, without a headless browser.</p>
+
+<p>Add the module and fetch the native library for your platform:</p>
+<pre><code>go get go.oicana.com/oicana
+export CGO_LDFLAGS="$(go run go.oicana.com/oicana/cmd/oicana-install)"
+go build ./...</code></pre>
+<p>The module links its native library through cgo, so it needs a C toolchain (MinGW-w64 on Windows).
+In PowerShell, use <code>$env:CGO_LDFLAGS = go run go.oicana.com/oicana/cmd/oicana-install</code>.</p>
+
+<ul>
+  <li><a href="https://oicana.com/docs/getting-started/4-8-go/">Getting started with Go</a></li>
+  <li><a href="https://pkg.go.dev/go.oicana.com/oicana">API reference on pkg.go.dev</a></li>
+  <li><a href="https://github.com/oicana/oicana/tree/main/integrations/go">Source on GitHub</a></li>
+  <li><a href="https://oicana.com">oicana.com</a></li>
+</ul>
+</body>
+</html>
